@@ -1,0 +1,149 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/favicon.svg" type="image/x-icon"/>
+    <title>Online Entertainment</title>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/app.css"/>
+</head>
+<body>
+<jsp:include page="../include/header.jsp"/>
+
+<section class="container page-wrapper">
+    <div class="page-content">
+        <div class="brand">
+            <img src="favicon.svg" alt="" srcset=""/>
+            <span>Online Entertainment</span>
+        </div>
+
+        <div class="welcome-container">
+            <h1 class="welcome-text">
+                Chào mừng bạn đến với <br/><span>Online Entertainment</span>
+            </h1>
+            <p class="welcome-para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                incidunt similique rerum optio labore commodi dolor, doloribus natus
+                in, laudantium dolorum? Quos eum deleniti necessitatibus nam in
+                nulla atque blanditiis.
+            </p>
+        </div>
+
+        <div class="social-icons-wrapper">
+            <h3 class="contact-text">Liên hệ với chúng tôi:</h3>
+            <a class="facebook" target="_blank" href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a
+                    class="github"
+                    target="_blank"
+                    href="https://github.com/TuanTo1711"
+            >
+                <i class="fa-brands fa-github" aria-hidden="true"></i> </a
+            ><a
+                class="twitter"
+                target="_blank"
+                href="https://twitter.com/yuuta_sakata"
+        >
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+        </a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <div class="border-animate"></div>
+            <form>
+                <h1>Đăng ký</h1>
+                <div class="form-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                            type="text"
+                            name="email"
+                            class="form-control"
+                            required
+                            placeholder="Please enter your email"
+                    />
+                    <span class="label-floating">Email</span>
+                    <i
+                            class="fa fa-check-circle status-icon success"
+                            aria-hidden="true"
+                    ></i>
+                    <small class="message success">Success message</small>
+                </div>
+
+                <div class="form-group">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            required
+                            placeholder="Please enter your password"
+                    />
+                    <span class="label-floating">Password</span>
+                    <i class="fa-solid fa-circle-exclamation status-icon failed"></i>
+                    <small class="message failed">Failed Message</small>
+                </div>
+
+                <div class="form-group">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input
+                            type="password"
+                            name="confirmPassword"
+                            class="form-control"
+                            required="required"
+                            placeholder="Please enter your password again"
+                    />
+                    <span class="label-floating">Confirm Password</span>
+                    <i class="fa-solid fa-circle-exclamation status-icon failed"></i>
+                    <small class="message failed">Failed Message</small>
+                </div>
+
+                <div class="form-inline">
+                    <div class="form-check">
+                        <span>Giới tính: </span>
+                        <input type="radio" name="remember" id="male" checked/>
+                        <label for="male">Nam</label>
+                        <input type="radio" name="remember" id="female"/>
+                        <label for="female">Nữ</label>
+                    </div>
+                </div>
+                <div class="form-inline">
+                    <div class="form-check">
+                        <span>Quyền hạn: </span>
+                        <input type="radio" name="role" id="admin"/>
+                        <label for="admin">Admin</label>
+                        <input type="radio" name="role" id="User" checked/>
+                        <label for="User">Người dùng</label>
+                    </div>
+                </div>
+
+                <div
+                        style="text-align: center; font-size: 1.5rem; margin-top: 3.5rem"
+                >
+                    Đã có tài khoản?
+                    <a href="login" style="color: var(--second-color)">Đăng nhập</a>
+                </div>
+
+                <button class="btn" style="margin-top: 3rem">Tạo</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<jsp:include page="../include/footer.jsp"/>
+</body>
+</html>
+

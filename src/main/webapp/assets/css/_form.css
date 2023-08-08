@@ -1,0 +1,342 @@
+.page-wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+    margin-top: 12.8rem !important;
+}
+
+.page-wrapper > * {
+    flex: 1 0 auto;
+    width: 50%;
+}
+
+.page-wrapper .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+
+    margin-left: 1.5rem;
+}
+
+.page-content .brand {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+}
+
+.page-content .brand img {
+    display: inline-block;
+    width: 10rem;
+    margin-right: 2rem;
+}
+
+.page-content .brand span {
+    font-size: 4.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.page-content .welcome-container .welcome-text {
+    font-size: 3.2rem;
+    color: var(--second-color);
+    letter-spacing: 0.3rem;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.page-content .welcome-container .welcome-para {
+    font-size: 1.5rem;
+    text-align: justify;
+    color: lightgray;
+}
+
+.page-content .social-icons-wrapper {
+    border-top: solid 1px gray;
+    position: relative;
+    width: 100%;
+}
+
+.page-content .social-icons-wrapper .contact-text {
+    font-size: 1.5rem;
+}
+
+.page-content .social-icons-wrapper a {
+    background-color: #26272b;
+    color: black;
+
+    display: inline-block;
+
+    width: 4.4rem;
+    height: 4.4rem;
+
+    font-size: 1.5rem;
+    line-height: 4.4rem;
+    text-align: center;
+
+    margin-right: 1.5rem;
+
+    border-radius: 100%;
+    transition: all 0.2s linear;
+}
+
+.page-content .social-icons-wrapper a:active,
+.page-content .social-icons-wrapper a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.page-wrapper .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container .form-wrapper {
+    position: relative;
+    width: 45rem;
+    height: max-content;
+    background-color: #1c1c1c;
+    border-radius: 1rem;
+    outline: 1rem;
+    overflow: hidden;
+}
+
+.form-container .form-wrapper::before {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            0deg,
+            transparent,
+            transparent,
+            var(--primary-color),
+            var(--primary-color),
+            var(--primary-color)
+    );
+    z-index: 0;
+    transform-origin: bottom right;
+    animation: rotating 6s linear infinite;
+}
+
+.form-container .form-wrapper::after {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            0deg,
+            transparent,
+            transparent,
+            var(--primary-color),
+            var(--primary-color),
+            var(--primary-color)
+    );
+    z-index: 0;
+    transform-origin: bottom right;
+    animation: rotating 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.border-animate::after {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            0deg,
+            transparent,
+            transparent,
+            var(--second-color),
+            var(--second-color),
+            var(--second-color)
+    );
+    z-index: 0;
+    transform-origin: bottom right;
+    animation: rotating 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.border-animate::before {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            0deg,
+            transparent,
+            transparent,
+            var(--second-color),
+            var(--second-color),
+            var(--second-color)
+    );
+    z-index: 0;
+    transform-origin: bottom right;
+    animation: rotating 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form-container .form-wrapper form {
+    position: relative;
+
+    background-color: #222;
+
+    padding: 5rem 4rem;
+    margin: 0.4rem;
+
+    border-radius: 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.form-container .form-wrapper form h1 {
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.form-container .form-wrapper form .form-group,
+.form-container .form-wrapper form .form-inline {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.form-container .form-wrapper form .form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.form-container .form-wrapper form .form-inline .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.form-container .form-wrapper form .form-inline .forget-link {
+    font-size: 1.3rem;
+    color: var(--second-color);
+}
+
+.form-container .form-wrapper form .form-group .form-control {
+    position: relative;
+    width: 85%;
+
+    padding: 2rem 3.5rem 1rem 3.5rem;
+
+    margin-bottom: 1.5rem;
+    margin-right: 3rem;
+
+    background: transparent;
+
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.form-container .form-wrapper form .form-group input:valid ~ span,
+.form-container .form-wrapper form .form-group input:focus ~ span {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    transform: translateY(-2.5rem);
+    background: transparent;
+}
+
+.form-container .form-wrapper form .form-group input::placeholder {
+    color: transparent;
+}
+
+.form-container .form-wrapper form .form-group input:focus::placeholder {
+    color: #8f8f8f;
+    transition: 0.5s;
+}
+
+.form-container .form-wrapper form .form-group i:not(.status-icon) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 2rem 0.8rem 1rem;
+    border-bottom: solid 1px white;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form-container .form-wrapper form .form-group i.status-icon {
+    position: absolute;
+    top: 0;
+    right: -13px;
+
+    padding: 2rem 0rem 1rem 0;
+
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+.success {
+    visibility: unset !important;
+    color: green;
+}
+
+.failed {
+    visibility: unset !important;
+    color: red;
+}
+
+.form-container .form-wrapper form .form-group .label-floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem 3.5rem 1rem;
+    color: #8f8f8f;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form-container .form-wrapper form .form-group .message {
+    font-size: 1.3rem;
+    /* transition: none; */
+}
